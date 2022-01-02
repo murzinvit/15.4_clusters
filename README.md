@@ -19,5 +19,8 @@
 Обеспечить доступ до БД RDS в private-сети.
 С помощью kubectl установить и запустить контейнер с phpmyadmin (образ взять из docker hub) и проверить подключение к БД RDS.
 
-Модуль Terraform для EKS - 
-https://learn.hashicorp.com/tutorials/terraform/eks 
+
+---
+worknotes: </br> 
+https://learn.hashicorp.com/tutorials/terraform/eks </br> 
+https://cloud.yandex.ru/docs/managed-mysql/operations/cluster-create </br> 
