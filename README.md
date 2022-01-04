@@ -24,3 +24,5 @@
 worknotes: </br> 
 https://learn.hashicorp.com/tutorials/terraform/eks </br> 
 https://cloud.yandex.ru/docs/managed-mysql/operations/cluster-create </br> 
+K8S tutorial: https://cloud.yandex.ru/docs/managed-kubernetes/?utm_source=console&utm_medium=empty-page&utm_campaign=managed-kubernetes </br>
+hashicorp.io: https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs </br>
