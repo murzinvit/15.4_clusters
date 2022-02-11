@@ -1,5 +1,5 @@
 variable "token" {
-  default = ""
+  default = "AQAAAAAF9CFjAATuwf34Iv3ZZUVjg8lMVW7si-4"
 }
 
 variable "cloud_id" {

@@ -52,10 +52,13 @@ resource "yandex_kubernetes_cluster" "test-kuber" {
     my_other_key = "test_key"
   }
 
+  kms_provider {
+    key_id = yandex_kms_symmetric_key.key-a.id
+  }
   release_channel = "STABLE"
 }
 
-resource "yandex_kubernetes_node_group" "my_node_group" {
+resource "yandex_kubernetes_node_group" "kuber_node_group" {
   cluster_id  = yandex_kubernetes_cluster.test-kuber.id
   name        = "test-group"
   description = "description"
@@ -63,7 +66,7 @@ resource "yandex_kubernetes_node_group" "my_node_group" {
 
 
   labels = {
-    "group_name" = "test-name"
+    "group_name" = "test-group"
   }
 
   instance_template {
@@ -91,8 +94,10 @@ resource "yandex_kubernetes_node_group" "my_node_group" {
   }
 
   scale_policy {
-    fixed_scale {
-      size = 3
+    auto_scale {
+      min = "3"
+      max = "6"
+      initial = "3"
     }
   }
 

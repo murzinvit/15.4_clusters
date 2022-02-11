@@ -3,11 +3,12 @@ resource "yandex_mdb_mysql_cluster" "mysql-cluster" {
   environment = "PRESTABLE"
   network_id  = yandex_vpc_network.network-1.id
   version     = "8.0"
+  deletion_protection = "true"
 
   resources {
-    resource_preset_id = "s2.micro"
+    resource_preset_id = "b1.medium"
     disk_type_id       = "network-ssd"
-    disk_size          = 16
+    disk_size          = 20
   }
 
   database {
@@ -15,9 +16,12 @@ resource "yandex_mdb_mysql_cluster" "mysql-cluster" {
   }
 
   maintenance_window {
-    type = "WEEKLY"
-    day  = "SAT"
-    hour = 12
+    type = "ANYTIME"
+  }
+
+  backup_window_start {
+    hours = "23"
+    minutes = "59"
   }
 
   user {
