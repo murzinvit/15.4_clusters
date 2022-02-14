@@ -43,9 +43,15 @@ resource "yandex_mdb_mysql_cluster" "mysql-cluster" {
     subnet_id = yandex_vpc_subnet.private-subnet-b.id
   }
 
+  host {
+    zone      = "ru-central1-c"
+    subnet_id = yandex_vpc_subnet.private-subnet-c.id
+  }
+
   depends_on = [
      yandex_vpc_network.network-1,
      yandex_vpc_subnet.private-subnet-a,
+     yandex_vpc_subnet.private-subnet-b,
      yandex_vpc_subnet.private-subnet-b,
   ]
 }
