@@ -56,6 +56,7 @@ resource "yandex_kubernetes_cluster" "test-kuber" {
     key_id = yandex_kms_symmetric_key.key-a.id
   }
   release_channel = "STABLE"
+  network_policy_provider = "CALICO"
 }
 
 resource "yandex_kubernetes_node_group" "kuber_node_group" {
