@@ -31,6 +31,10 @@
 - [K8S Cluster](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kubernetes_cluster)
 - [K8S node group](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kubernetes_node_group)
 --- 
+![](https://github.com/murzinvit/screen_1/blob/5bcd8c3c6c2125368b6b7370142ba185793e568a/phpmyadmin_web.jpg) </br>
+
+
+
 ## Задание 2. Вариант с AWS (необязательное к выполнению)
 
 1. Настроить с помощью terraform кластер EKS в 3 AZ региона, а также RDS на базе MySQL с поддержкой MultiAZ для репликации и создать 2 readreplica для работы:
