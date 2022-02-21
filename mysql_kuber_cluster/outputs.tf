@@ -17,3 +17,12 @@ output "cluster_id" {
 
   value = yandex_kubernetes_cluster.test-kuber.id
 }
+
+output "cluster_hosts_fqdns" {
+  value = ["${yandex_mdb_mysql_cluster.mysql-cluster.host.*.fqdn}"]
+}
+
+output "cluster_hosts_fips" {
+  value = "${zipmap(yandex_mdb_mysql_cluster.mysql-cluster.host.*.fqdn,
+  yandex_mdb_mysql_cluster.mysql-cluster.host.*.assign_public_ip)}"
+}
