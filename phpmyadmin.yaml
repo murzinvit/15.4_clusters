@@ -18,7 +18,7 @@ spec:
         image: phpmyadmin
         env:
         - name: PMA_HOST
-          value: host=rc1a-ok9swcdwe0or929z.mdb.yandexcloud.net
+          value: rc1a-ok9swcdwe0or929z.mdb.yandexcloud.net
         env:
         - name: PMA_PORT
           value: 3306
